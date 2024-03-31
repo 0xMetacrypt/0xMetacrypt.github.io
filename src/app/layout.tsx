@@ -1,12 +1,16 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 
+import { PrimaryFooter } from "@/components/layout/PrimaryFooter";
+import { PrimaryNavigation } from "@/components/layout/PrimaryNavigation";
 import { AppConfig, GOOGLE_ANALYTICS_ID } from "@/config/appConfig";
+
+import { Providers } from "./providers";
 
 import "./globals.css";
 
-const inter = Inter({
+const primaryFont = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "block",
@@ -51,7 +55,13 @@ export default function RootLayout({ children }: IRootLayout) {
   return (
     <html lang="en">
       {GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />}
-      <body className={inter.className}>{children}</body>
+      <body className={primaryFont.className}>
+        <Providers>
+          <PrimaryNavigation />
+          <main className="flex flex-col items-center justify-center divide-y-2 divide-blue-600">{children}</main>
+          <PrimaryFooter />
+        </Providers>
+      </body>
     </html>
   );
 }

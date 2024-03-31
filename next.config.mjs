@@ -8,6 +8,7 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 const nextConfig = withBundleAnalyzer({
   //   output: "export",
   reactStrictMode: true,
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
