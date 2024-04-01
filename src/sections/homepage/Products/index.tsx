@@ -7,7 +7,7 @@ import { Container } from "@/components/layout/Container";
 
 interface ISingleProduct {
   link: string;
-  logo: string;
+  logo?: string;
   title: string;
   description: string;
   tags: string[];
@@ -66,20 +66,22 @@ function SingleProduct({ link, logo, title, description, tags, soon = false }: I
       href={link}
       target="_blank"
     >
-      <div className="relative block rounded-xl bg-white p-4 ring-1 ring-slate-500/20 transition-all hover:ring-2 hover:ring-blue-600/30">
+      <div className="relative block h-full rounded-xl bg-white p-4 ring-1 ring-slate-500/20 transition-all hover:ring-2 hover:ring-blue-600/30">
         {soon && (
           <div className="absolute -m-4 grid h-full w-full items-center justify-center">
             <p className="text-blue-600">WIP</p>
           </div>
         )}
         <div className={clsx("flex flex-col gap-2", soon && "blur-md")}>
-          <Image
-            className="h-16 w-16 flex-none"
-            width={512}
-            height={512}
-            src={logo}
-            alt={title}
-          />
+          {logo && (
+            <Image
+              className="h-16 w-16 flex-none"
+              width={512}
+              height={512}
+              src={logo}
+              alt={title}
+            />
+          )}
           <h2 className="text-lg font-semibold">{title}</h2>
           <div className="-mt-1 text-sm text-slate-900">{description}</div>
           <div className="mt-2 space-x-2 text-xs capitalize text-blue-500">

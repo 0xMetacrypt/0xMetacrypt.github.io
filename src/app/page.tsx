@@ -1,3 +1,4 @@
+import { CTA } from "@/sections/homepage/CTA";
 import { Hero } from "@/sections/homepage/Hero";
 import { Products } from "@/sections/homepage/Products";
 import { Stats } from "@/sections/homepage/Stats";
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Products />
+      <CTA />
     </>
   );
 }

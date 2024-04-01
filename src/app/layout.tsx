@@ -58,7 +58,9 @@ export default function RootLayout({ children }: IRootLayout) {
       <body className={primaryFont.className}>
         <Providers>
           <PrimaryNavigation />
-          <main className="flex flex-col items-center justify-center divide-y-2 divide-blue-600">{children}</main>
+          <main className="flex flex-col items-center justify-center divide-y-2 divide-dashed divide-slate-200 border-b-2 border-dashed border-slate-200">
+            {children}
+          </main>
           <PrimaryFooter />
         </Providers>
       </body>

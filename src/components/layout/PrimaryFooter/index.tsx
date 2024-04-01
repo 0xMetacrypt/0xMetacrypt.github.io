@@ -4,7 +4,7 @@ import { AppConfig } from "@/config/appConfig";
 
 export function PrimaryFooter() {
   return (
-    <footer className="relative border-t-2 border-blue-600">
+    <footer className="relative">
       <Container>
         <div className="flex flex-col gap-4 py-20">
           <Logo className="mx-auto" />
@@ -15,7 +15,7 @@ export function PrimaryFooter() {
             </p>
           </div>
           <div className="mt-8 divide-x-2 text-center text-sm text-slate-600">
-            <span className="px-3">hello@metacrypt.org</span>
+            <span className="px-3">hi@metacrypt.org</span>
             <span className="px-3">security@metacrypt.org</span>
           </div>
         </div>
