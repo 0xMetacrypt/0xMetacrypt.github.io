@@ -35,6 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
+    siteName: AppConfig.site_name,
   },
 };
 

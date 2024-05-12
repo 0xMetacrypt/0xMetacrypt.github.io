@@ -19,7 +19,7 @@ export function Logo({ className }: React.ComponentPropsWithoutRef<"div">) {
           alt={`${AppConfig.title} Logo`}
           priority
         />
-        <span className="text-2xl font-bold text-slate-800">{AppConfig.title}</span>
+        <span className="text-2xl font-bold text-slate-800">{AppConfig.site_name}</span>
       </Link>
     </div>
   );
