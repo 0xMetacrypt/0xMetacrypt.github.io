@@ -6,17 +6,16 @@ const withBundleAnalyzer = NextBundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
-  //   output: "export",
+  output: "export",
   reactStrictMode: true,
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  experimental: {},
-  poweredByHeader: false,
-  async redirects() {
-    return [];
+  experimental: {
+    fallbackNodePolyfills: false,
   },
+  poweredByHeader: false,
 });
 
 export default nextConfig;

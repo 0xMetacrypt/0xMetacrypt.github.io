@@ -23,7 +23,7 @@ const productsList: ISingleProduct[] = [
     tags: ["no-code", "free"],
   },
   {
-    link: "/tools/uniswap-v3-calculator-simulator/",
+    link: "/uniswap-v3-calculator-simulator/",
     logo: "/images/products/uniswap-v3-calculator.png",
     title: "Uniswap V3 Calculator",
     description: "Easily calculate and simulate any V3 position with essential stats such as earnings, volume and APR.",
